@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import {TranslateModule, TranslateService} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslateModule
+  ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
