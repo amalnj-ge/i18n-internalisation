@@ -1,7 +1,6 @@
 {
   "name": "i18n-internalisation",
-  "version": "0.0.0",
-  "main": "main.js",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
