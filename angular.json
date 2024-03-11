@@ -22,7 +22,9 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "french.json", "input": "./i18n", "output": "./assets/i18n" },
+              { "glob": "calibration-details.json", "input": "./calibration-data", "output": "./assets/calibration-data" }
             ],
             "styles": [
               "src/styles.css"
