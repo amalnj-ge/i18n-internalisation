@@ -1,0 +1,24 @@
+.table-border {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 5px solid #bfbdbd;
+  }
+
+  /* .outer-table{
+    width: 100%;
+    border-collapse: collapse;
+  } */
+  
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: #ddd;
+  }

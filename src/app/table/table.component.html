@@ -1,0 +1,19 @@
+
+<table class="table-border">
+    <thead>
+        <tr>
+            <ng-container *ngFor="let column of columns; let i = index">
+                <th>{{ column }}</th>
+            </ng-container>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of groups;let i = index">
+            <td>{{row.calibrationFileName}}</td>
+            <td>{{row.lastModified}}</td>
+            <td>{{row._default}}</td>
+            <td>{{row.calibrationStatus}}</td>
+        </tr>
+    </tbody>
+</table>
+   

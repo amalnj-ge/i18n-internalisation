@@ -1,21 +1,32 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {NavbarComponent} from "./navbar/navbar.component";
-import {CardComponent} from "./card/card.component";
-import {TranslateService} from "@ngx-translate/core";
+import { Component, OnInit } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import SockJS from 'sockjs-client';
+import * as Stomp from 'stompjs';
+import { RouterModule } from '@angular/router';
+import { TableComponent } from './table/table.component';
+import { NavbarComponent } from './navbar/navbar.component';
+// import fetch from 'node-fetch';
+
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, NavbarComponent, CardComponent],
+  standalone:true,
+  imports: [
+    CommonModule,
+    TableComponent,
+    NavbarComponent,
+    RouterModule,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'i18n-internalisation';
-  constructor(private translateService: TranslateService) {
-    // Initialize ngx-translate
-    translateService.setDefaultLang('english'); // Set default language
-    translateService.use(localStorage.getItem("languageSelected")||"english"); // Use a specific language (e.g., 'en' for English)
+
+
+
+export class AppComponent implements OnInit{
+  ngOnInit(): void {
+
   }
 }
+

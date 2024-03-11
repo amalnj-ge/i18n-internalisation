@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,21 +7,6 @@ import {TranslateService} from "@ngx-translate/core";
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent {
 
-  language: String = '';
-
-  constructor(private translateService: TranslateService) {
-
-  }
-
-  ngOnInit() {
-    this.language = localStorage.getItem("languageSelected") || 'english';
-  }
-
-  ChangeLanguage(lang:any) {
-    const languageSelected = lang.target.value;
-    localStorage.setItem("languageSelected",languageSelected);
-    this.translateService.use(languageSelected);
-  }
 }
