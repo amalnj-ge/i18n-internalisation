@@ -1,4 +1,15 @@
 <app-navbar></app-navbar>
 <app-table></app-table>
+<div id="stats">
+  <div class="stat-name">
+    <p *ngIf="loading">{{"loading"}}</p>
+    <p *ngIf="!loading">{{viewCheckedTime.toFixed(3) + " ms"}}</p>
+    <p>Loading Time</p>
+  </div>
+  <div class="stat-name">
+    <p>{{navigator.hardwareConcurrency}}</p>
+    <p>Concurrent Cores</p>
+  </div>
+</div>
 
 
